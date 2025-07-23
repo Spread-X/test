@@ -8,43 +8,45 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 248 250 252;
-    --foreground: 215 25% 15%;
+    --background: 8 12 16;
+    --foreground: 0 255 65;
 
-    --card: 255 255 255;
-    --card-foreground: 215 25% 15%;
+    --card: 12 16 20;
+    --card-foreground: 220 255 220;
 
-    --popover: 255 255 255;
-    --popover-foreground: 215 25% 15%;
+    --popover: 8 12 16;
+    --popover-foreground: 0 255 65;
 
-    --primary: 221 83% 53%;
-    --primary-foreground: 255 255 255;
+    --primary: 120 100% 50%;
+    --primary-foreground: 8 12 16;
 
-    --secondary: 241 245 249;
-    --secondary-foreground: 215 25% 25%;
+    --secondary: 16 20 24;
+    --secondary-foreground: 0 255 65;
 
-    --muted: 248 250 252;
-    --muted-foreground: 215 16% 50%;
+    --muted: 20 24 28;
+    --muted-foreground: 120 50% 70%;
 
-    --accent: 237 240 255;
-    --accent-foreground: 221 83% 53%;
+    --accent: 120 100% 25%;
+    --accent-foreground: 0 255 65;
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 100% 50%;
     --destructive-foreground: 255 255 255;
 
-    --border: 226 232 240;
-    --input: 226 232 240;
-    --ring: 221 83% 53%;
+    --border: 28 32 36;
+    --input: 28 32 36;
+    --ring: 120 100% 50%;
 
-    /* Custom portfolio colors */
-    --hero-gradient-from: 219 78% 58%;
-    --hero-gradient-to: 147 51% 58%;
-    --surface: 255 255 255;
-    --surface-secondary: 248 250 252;
-    --text-primary: 215 25% 15%;
-    --text-secondary: 215 16% 50%;
+    /* Hacker-style colors */
+    --terminal-green: 120 100% 50%;
+    --terminal-green-dim: 120 80% 40%;
+    --matrix-green: 120 100% 75%;
+    --neon-glow: 120 100% 50%;
+    --background-dark: 8 12 16;
+    --background-darker: 4 8 12;
+    --text-terminal: 120 90% 85%;
+    --text-dim: 120 50% 60%;
 
-    --radius: 0.5rem;
+    --radius: 0.25rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -109,5 +111,52 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+  }
+
+  /* Neon glow effects */
+  .neon-glow {
+    text-shadow: 
+      0 0 5px hsl(var(--neon-glow)),
+      0 0 10px hsl(var(--neon-glow)),
+      0 0 15px hsl(var(--neon-glow)),
+      0 0 20px hsl(var(--neon-glow));
+  }
+
+  .terminal-border {
+    border: 1px solid hsl(var(--terminal-green));
+    box-shadow: 
+      0 0 10px hsl(var(--terminal-green) / 0.3),
+      inset 0 0 10px hsl(var(--terminal-green) / 0.1);
+  }
+
+  /* Matrix-style background animation */
+  @keyframes matrix-rain {
+    0% {
+      transform: translateY(-100vh);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+
+  .matrix-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, hsl(var(--terminal-green) / 0.3), transparent),
+      radial-gradient(2px 2px at 40px 70px, hsl(var(--terminal-green) / 0.2), transparent),
+      radial-gradient(1px 1px at 90px 40px, hsl(var(--terminal-green) / 0.3), transparent),
+      radial-gradient(1px 1px at 130px 80px, hsl(var(--terminal-green) / 0.2), transparent);
+    background-repeat: repeat;
+    background-size: 150px 100px;
+    animation: matrix-rain 20s linear infinite;
+    opacity: 0.1;
   }
 }
