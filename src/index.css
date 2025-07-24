@@ -8,43 +8,43 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 8 12 16;
-    --foreground: 0 255 65;
+    --background: 218 23% 8%;
+    --foreground: 213 31% 91%;
 
-    --card: 12 16 20;
-    --card-foreground: 220 255 220;
+    --card: 217 33% 12%;
+    --card-foreground: 213 31% 91%;
 
-    --popover: 8 12 16;
-    --popover-foreground: 0 255 65;
+    --popover: 217 33% 12%;
+    --popover-foreground: 213 31% 91%;
 
-    --primary: 120 100% 50%;
-    --primary-foreground: 8 12 16;
+    --primary: 262 83% 58%;
+    --primary-foreground: 213 31% 91%;
 
-    --secondary: 16 20 24;
-    --secondary-foreground: 0 255 65;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 213 31% 91%;
 
-    --muted: 20 24 28;
-    --muted-foreground: 120 50% 70%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 9% 45%;
 
-    --accent: 120 100% 25%;
-    --accent-foreground: 0 255 65;
+    --accent: 217 33% 17%;
+    --accent-foreground: 213 31% 91%;
 
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 255 255 255;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 213 31% 91%;
 
-    --border: 28 32 36;
-    --input: 28 32 36;
-    --ring: 120 100% 50%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 262 83% 58%;
 
-    /* Hacker-style colors */
-    --terminal-green: 120 100% 50%;
-    --terminal-green-dim: 120 80% 40%;
-    --matrix-green: 120 100% 75%;
-    --neon-glow: 120 100% 50%;
-    --background-dark: 8 12 16;
-    --background-darker: 4 8 12;
-    --text-terminal: 120 90% 85%;
-    --text-dim: 120 50% 60%;
+    /* Elegant dark colors */
+    --elegant-purple: 262 83% 58%;
+    --elegant-purple-light: 262 83% 70%;
+    --elegant-blue: 217 91% 60%;
+    --elegant-gray: 217 9% 45%;
+    --elegant-dark: 218 23% 8%;
+    --elegant-darker: 220 23% 6%;
+    --elegant-light: 213 31% 91%;
+    --elegant-shadow: 220 23% 4%;
 
     --radius: 0.75rem;
 
@@ -111,53 +111,26 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-family: 'Montserrat', sans-serif;
   }
 
-  /* Neon glow effects */
-  .neon-glow {
-    text-shadow: 
-      0 0 5px hsl(var(--neon-glow)),
-      0 0 10px hsl(var(--neon-glow)),
-      0 0 15px hsl(var(--neon-glow)),
-      0 0 20px hsl(var(--neon-glow));
-  }
-
-  .terminal-border {
-    border: 1px solid hsl(var(--terminal-green));
-    border-radius: 12px;
+  /* Elegant shadows and effects */
+  .elegant-shadow {
     box-shadow: 
-      0 0 10px hsl(var(--terminal-green) / 0.3),
-      inset 0 0 10px hsl(var(--terminal-green) / 0.1);
+      0 4px 20px -2px hsl(var(--elegant-shadow) / 0.3),
+      0 2px 8px -1px hsl(var(--elegant-shadow) / 0.15);
   }
 
-  /* Matrix-style background animation */
-  @keyframes matrix-rain {
-    0% {
-      transform: translateY(-100vh);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh);
-      opacity: 0;
-    }
+  .elegant-shadow-hover {
+    box-shadow: 
+      0 12px 40px -4px hsl(var(--elegant-shadow) / 0.4),
+      0 6px 16px -2px hsl(var(--elegant-shadow) / 0.25);
   }
 
-  .matrix-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(2px 2px at 20px 30px, hsl(var(--terminal-green) / 0.3), transparent),
-      radial-gradient(2px 2px at 40px 70px, hsl(var(--terminal-green) / 0.2), transparent),
-      radial-gradient(1px 1px at 90px 40px, hsl(var(--terminal-green) / 0.3), transparent),
-      radial-gradient(1px 1px at 130px 80px, hsl(var(--terminal-green) / 0.2), transparent);
-    background-repeat: repeat;
-    background-size: 150px 100px;
-    animation: matrix-rain 20s linear infinite;
-    opacity: 0.1;
+  .elegant-glow {
+    box-shadow: 
+      0 0 20px hsl(var(--elegant-purple) / 0.3),
+      0 0 40px hsl(var(--elegant-purple) / 0.1);
   }
+}
 }
