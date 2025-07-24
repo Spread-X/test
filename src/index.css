@@ -8,43 +8,34 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 8 12 16;
-    --foreground: 0 255 65;
-
-    --card: 12 16 20;
-    --card-foreground: 220 255 220;
-
-    --popover: 8 12 16;
-    --popover-foreground: 0 255 65;
-
-    --primary: 120 100% 50%;
-    --primary-foreground: 8 12 16;
-
-    --secondary: 16 20 24;
-    --secondary-foreground: 0 255 65;
-
-    --muted: 20 24 28;
-    --muted-foreground: 120 50% 70%;
-
-    --accent: 120 100% 25%;
-    --accent-foreground: 0 255 65;
-
-    --destructive: 0 100% 50%;
-    --destructive-foreground: 255 255 255;
-
-    --border: 28 32 36;
-    --input: 28 32 36;
-    --ring: 120 100% 50%;
-
-    /* Hacker-style colors */
-    --terminal-green: 120 100% 50%;
-    --terminal-green-dim: 120 80% 40%;
-    --matrix-green: 120 100% 75%;
-    --neon-glow: 120 100% 50%;
-    --background-dark: 8 12 16;
-    --background-darker: 4 8 12;
-    --text-terminal: 120 90% 85%;
-    --text-dim: 120 50% 60%;
+    --background: 220 13% 9%;
+    --foreground: 220 9% 96%;
+    --card: 220 13% 11%;
+    --card-foreground: 220 9% 96%;
+    --popover: 220 13% 11%;
+    --popover-foreground: 220 9% 96%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 220 9% 96%;
+    --secondary: 220 13% 15%;
+    --secondary-foreground: 220 9% 96%;
+    --muted: 220 13% 15%;
+    --muted-foreground: 220 9% 65%;
+    --accent: 262 83% 58%;
+    --accent-foreground: 220 9% 96%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 220 9% 96%;
+    --border: 220 13% 15%;
+    --input: 220 13% 15%;
+    --ring: 262 83% 58%;
+    
+    /* Elegant Dark Theme */
+    --surface: 220 13% 13%;
+    --surface-hover: 220 13% 16%;
+    --text-primary: 220 9% 96%;
+    --text-secondary: 220 9% 75%;
+    --text-muted: 220 9% 55%;
+    --elegant-shadow: 220 25% 5%;
+    --elegant-glow: 262 83% 58%;
 
     --radius: 0.75rem;
 
@@ -111,53 +102,32 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'JetBrains Mono', 'Fira Code', 'Consolas', monospace;
+    font-family: 'Montserrat', sans-serif;
   }
+}
 
-  /* Neon glow effects */
-  .neon-glow {
-    text-shadow: 
-      0 0 5px hsl(var(--neon-glow)),
-      0 0 10px hsl(var(--neon-glow)),
-      0 0 15px hsl(var(--neon-glow)),
-      0 0 20px hsl(var(--neon-glow));
-  }
+/* Elegant Shadow System */
+.shadow-elegant {
+  box-shadow: 
+    0 4px 6px -1px hsl(var(--elegant-shadow) / 0.1),
+    0 2px 4px -1px hsl(var(--elegant-shadow) / 0.06);
+}
 
-  .terminal-border {
-    border: 1px solid hsl(var(--terminal-green));
-    border-radius: 12px;
-    box-shadow: 
-      0 0 10px hsl(var(--terminal-green) / 0.3),
-      inset 0 0 10px hsl(var(--terminal-green) / 0.1);
-  }
+.shadow-elegant-lg {
+  box-shadow: 
+    0 10px 15px -3px hsl(var(--elegant-shadow) / 0.1),
+    0 4px 6px -2px hsl(var(--elegant-shadow) / 0.05);
+}
 
-  /* Matrix-style background animation */
-  @keyframes matrix-rain {
-    0% {
-      transform: translateY(-100vh);
-      opacity: 1;
-    }
-    100% {
-      transform: translateY(100vh);
-      opacity: 0;
-    }
-  }
+.shadow-elegant-xl {
+  box-shadow: 
+    0 20px 25px -5px hsl(var(--elegant-shadow) / 0.1),
+    0 10px 10px -5px hsl(var(--elegant-shadow) / 0.04);
+}
 
-  .matrix-bg::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(2px 2px at 20px 30px, hsl(var(--terminal-green) / 0.3), transparent),
-      radial-gradient(2px 2px at 40px 70px, hsl(var(--terminal-green) / 0.2), transparent),
-      radial-gradient(1px 1px at 90px 40px, hsl(var(--terminal-green) / 0.3), transparent),
-      radial-gradient(1px 1px at 130px 80px, hsl(var(--terminal-green) / 0.2), transparent);
-    background-repeat: repeat;
-    background-size: 150px 100px;
-    animation: matrix-rain 20s linear infinite;
-    opacity: 0.1;
-  }
+.elegant-glow {
+  box-shadow: 
+    0 0 20px hsl(var(--elegant-glow) / 0.15),
+    0 0 40px hsl(var(--elegant-glow) / 0.1);
+}
 }

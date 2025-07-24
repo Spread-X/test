@@ -19,8 +19,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				sans: ['Montserrat', 'system-ui', 'sans-serif'],
 				mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'monospace'],
-				terminal: ['Courier New', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -56,14 +56,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				'terminal-green': 'hsl(var(--terminal-green))',
-				'terminal-green-dim': 'hsl(var(--terminal-green-dim))',
-				'matrix-green': 'hsl(var(--matrix-green))',
-				'neon-glow': 'hsl(var(--neon-glow))',
-				'background-dark': 'hsl(var(--background-dark))',
-				'background-darker': 'hsl(var(--background-darker))',
-				'text-terminal': 'hsl(var(--text-terminal))',
-				'text-dim': 'hsl(var(--text-dim))',
+				'surface': 'hsl(var(--surface))',
+				'surface-hover': 'hsl(var(--surface-hover))',
+				'text-primary': 'hsl(var(--text-primary))',
+				'text-secondary': 'hsl(var(--text-secondary))',
+				'text-muted': 'hsl(var(--text-muted))',
+				'elegant-shadow': 'hsl(var(--elegant-shadow))',
+				'elegant-glow': 'hsl(var(--elegant-glow))',
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
