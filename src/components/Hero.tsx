@@ -16,7 +16,7 @@ export const Hero = () => {
         </div>
         
         <h1 className="text-5xl md:text-7xl font-bold mb-6 text-text-primary bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          Alex Johnson
+          Harsithraja Raja
         </h1>
         
         <div className="rounded-2xl border border-border p-8 mb-8 bg-surface/80 backdrop-blur-lg shadow-elegant-lg hover:shadow-elegant-xl hover:bg-surface-hover transition-all duration-500 hover:scale-105 elegant-glow">

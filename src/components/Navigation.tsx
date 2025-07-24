@@ -24,7 +24,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3 text-primary group">
             <User className="w-6 h-6 group-hover:scale-110 transition-all duration-300" />
-            <span className="text-xl font-bold hover:scale-105 transition-transform duration-300">Alex Johnson</span>
+            <span className="text-xl font-bold hover:scale-105 transition-transform duration-300">Harsithraja Raja</span>
           </div>
           
           {/* Desktop Navigation */}
