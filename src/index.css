@@ -46,7 +46,7 @@ All colors MUST be HSL.
     --text-terminal: 120 90% 85%;
     --text-dim: 120 50% 60%;
 
-    --radius: 0.25rem;
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -125,6 +125,7 @@ All colors MUST be HSL.
 
   .terminal-border {
     border: 1px solid hsl(var(--terminal-green));
+    border-radius: 12px;
     box-shadow: 
       0 0 10px hsl(var(--terminal-green) / 0.3),
       inset 0 0 10px hsl(var(--terminal-green) / 0.1);

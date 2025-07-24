@@ -55,7 +55,7 @@ export const BlogSection = () => {
             <span className="text-terminal-green font-mono text-lg">&gt;</span>
             <h2 className="text-4xl font-bold text-terminal-green font-mono neon-glow">LOG_ENTRIES.DB</h2>
           </div>
-          <div className="terminal-border p-6 bg-background-darker/50 backdrop-blur-sm max-w-4xl mx-auto">
+          <div className="rounded-2xl border border-terminal-green-dim p-8 bg-background-darker/60 backdrop-blur-lg max-w-4xl mx-auto hover:bg-background-darker/70 transition-all duration-500 animate-slide-up">
             <p className="text-lg text-text-terminal font-mono leading-relaxed mb-4">
               <span className="text-terminal-green">$</span> tail -f /var/log/hacker_journey.log
             </p>
@@ -68,7 +68,9 @@ export const BlogSection = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {posts.map((post, index) => (
-            <BlogPost key={index} {...post} />
+            <div key={index} className="animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <BlogPost {...post} />
+            </div>
           ))}
         </div>
       </div>

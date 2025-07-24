@@ -53,7 +53,7 @@ export const About = () => {
             <span className="text-terminal-green font-mono text-lg">&gt;</span>
             <h2 className="text-4xl font-bold text-terminal-green font-mono neon-glow">ABOUT_ME.TXT</h2>
           </div>
-          <div className="terminal-border p-6 bg-background-darker/50 backdrop-blur-sm max-w-4xl mx-auto">
+          <div className="rounded-2xl border border-terminal-green-dim p-8 bg-background-darker/60 backdrop-blur-lg max-w-4xl mx-auto hover:bg-background-darker/70 transition-all duration-500 animate-slide-up">
             <p className="text-lg text-text-terminal font-mono leading-relaxed mb-4">
               <span className="text-terminal-green">$</span> cat personal_info.log
             </p>
@@ -73,13 +73,13 @@ export const About = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <Card key={index} className="terminal-border bg-background-darker/50 hover:bg-terminal-green/10 transition-all duration-300 hover:-translate-y-1 backdrop-blur-sm group">
+            <Card key={index} className="rounded-2xl border border-terminal-green-dim bg-background-darker/50 hover:bg-terminal-green/10 transition-all duration-500 hover:scale-105 hover:border-terminal-green backdrop-blur-lg group animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="space-y-4 pt-6">
-                <div className="w-12 h-12 terminal-border bg-terminal-green/20 flex items-center justify-center mx-auto group-hover:bg-terminal-green/30 transition-colors">
-                  <skill.icon className="w-6 h-6 text-terminal-green" />
+                <div className="w-12 h-12 rounded-xl border border-terminal-green-dim bg-terminal-green/20 flex items-center justify-center mx-auto group-hover:bg-terminal-green/30 transition-all duration-300 group-hover:rotate-12">
+                  <skill.icon className="w-6 h-6 text-terminal-green group-hover:animate-bounce-subtle" />
                 </div>
-                <h3 className="text-lg font-bold text-terminal-green font-mono text-center">{skill.title}</h3>
-                <p className="text-text-dim text-sm leading-relaxed text-center font-mono">{skill.description}</p>
+                <h3 className="text-lg font-bold text-terminal-green font-mono text-center group-hover:neon-glow transition-all duration-300">{skill.title}</h3>
+                <p className="text-text-dim text-sm leading-relaxed text-center font-mono group-hover:text-text-terminal transition-colors duration-300">{skill.description}</p>
               </CardContent>
             </Card>
           ))}

@@ -78,7 +78,9 @@ export default {
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				xl: 'calc(var(--radius) + 4px)',
+				'2xl': 'calc(var(--radius) + 8px)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -136,6 +138,22 @@ export default {
 				'scan-line': {
 					'0%': { transform: 'translateY(-100%)' },
 					'100%': { transform: 'translateY(100vh)' }
+				},
+				'slide-up': {
+					'0%': { transform: 'translateY(20px)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' }
+				},
+				'slide-in-left': {
+					'0%': { transform: 'translateX(-20px)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(20px)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'bounce-subtle': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-4px)' }
 				}
 			},
 			animation: {
@@ -145,7 +163,11 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'glitch': 'glitch 0.3s ease-in-out infinite',
 				'terminal-flicker': 'terminal-flicker 1.5s ease-in-out infinite',
-				'scan-line': 'scan-line 2s linear infinite'
+				'scan-line': 'scan-line 2s linear infinite',
+				'slide-up': 'slide-up 0.5s ease-out',
+				'slide-in-left': 'slide-in-left 0.4s ease-out',
+				'slide-in-right': 'slide-in-right 0.4s ease-out',
+				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite'
 			}
 		}
 	},

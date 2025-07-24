@@ -13,7 +13,7 @@ interface BlogPostProps {
 
 export const BlogPost = ({ title, excerpt, date, readTime, tags, featured = false }: BlogPostProps) => {
   return (
-    <Card className={`group cursor-pointer transition-all duration-300 hover:-translate-y-1 terminal-border backdrop-blur-sm ${
+    <Card className={`group cursor-pointer transition-all duration-500 hover:scale-105 rounded-2xl border border-terminal-green-dim backdrop-blur-lg hover:border-terminal-green hover:shadow-lg hover:shadow-terminal-green/10 ${
       featured ? 'bg-terminal-green/10 ring-2 ring-terminal-green/30' : 'bg-background-darker/50 hover:bg-terminal-green/5'
     }`}>
       <CardHeader className="space-y-4">
@@ -29,7 +29,7 @@ export const BlogPost = ({ title, excerpt, date, readTime, tags, featured = fals
             </div>
           </div>
           {featured && (
-            <Badge variant="outline" className="terminal-border bg-terminal-green/20 text-terminal-green border-terminal-green/40 font-mono">
+            <Badge variant="outline" className="rounded-lg border border-terminal-green bg-terminal-green/20 text-terminal-green font-mono hover:scale-105 transition-transform">
               [FEATURED]
             </Badge>
           )}
@@ -51,7 +51,7 @@ export const BlogPost = ({ title, excerpt, date, readTime, tags, featured = fals
         
         <div className="flex flex-wrap gap-2">
           {tags.map((tag, index) => (
-            <Badge key={index} variant="outline" className="text-xs font-mono terminal-border bg-background-darker/50 text-text-dim hover:text-terminal-green transition-colors">
+            <Badge key={index} variant="outline" className="text-xs font-mono rounded-lg border border-terminal-green-dim bg-background-darker/50 text-text-dim hover:text-terminal-green hover:bg-terminal-green/10 transition-all duration-300 hover:scale-105">
               #{tag.toLowerCase().replace(' ', '_')}
             </Badge>
           ))}

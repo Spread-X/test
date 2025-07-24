@@ -31,7 +31,7 @@ export const Hero = () => {
           <span className="animate-glitch">ALEX_JOHNSON.EXE</span>
         </h1>
         
-        <div className="terminal-border p-6 mb-8 bg-background-darker/50 backdrop-blur-sm">
+        <div className="rounded-2xl border border-terminal-green-dim p-8 mb-8 bg-background-darker/60 backdrop-blur-lg hover:bg-background-darker/70 transition-all duration-500 hover:scale-[1.02]">
           <p className="text-lg md:text-xl text-text-terminal mb-4 font-mono">
             <span className="text-terminal-green">&gt;</span> Initializing hacker.portfolio...
           </p>
@@ -45,13 +45,13 @@ export const Hero = () => {
         
         {/* Social Links */}
         <div className="flex justify-center gap-4 mb-12">
-          <Button variant="outline" size="icon" className="terminal-border bg-background-darker/50 hover:bg-terminal-green/20 text-terminal-green hover:text-matrix-green transition-all duration-300">
+          <Button variant="outline" size="icon" className="rounded-xl border border-terminal-green-dim bg-background-darker/50 hover:bg-terminal-green/20 text-terminal-green hover:text-matrix-green transition-all duration-300 hover:scale-110 hover:rotate-6">
             <Github className="w-5 h-5" />
           </Button>
-          <Button variant="outline" size="icon" className="terminal-border bg-background-darker/50 hover:bg-terminal-green/20 text-terminal-green hover:text-matrix-green transition-all duration-300">
+          <Button variant="outline" size="icon" className="rounded-xl border border-terminal-green-dim bg-background-darker/50 hover:bg-terminal-green/20 text-terminal-green hover:text-matrix-green transition-all duration-300 hover:scale-110 hover:rotate-6">
             <Linkedin className="w-5 h-5" />
           </Button>
-          <Button variant="outline" size="icon" className="terminal-border bg-background-darker/50 hover:bg-terminal-green/20 text-terminal-green hover:text-matrix-green transition-all duration-300">
+          <Button variant="outline" size="icon" className="rounded-xl border border-terminal-green-dim bg-background-darker/50 hover:bg-terminal-green/20 text-terminal-green hover:text-matrix-green transition-all duration-300 hover:scale-110 hover:rotate-6">
             <Mail className="w-5 h-5" />
           </Button>
         </div>
@@ -59,7 +59,7 @@ export const Hero = () => {
         {/* CTA Button */}
         <Button 
           onClick={scrollToContent}
-          className="group terminal-border bg-terminal-green/20 hover:bg-terminal-green/30 text-terminal-green hover:text-matrix-green px-8 py-3 text-lg font-mono transition-all duration-300 hover:scale-105"
+          className="group rounded-2xl border border-terminal-green bg-terminal-green/20 hover:bg-terminal-green/30 text-terminal-green hover:text-matrix-green px-8 py-4 text-lg font-mono transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-terminal-green/20"
         >
           <Code2 className="mr-2 w-5 h-5" />
           ACCESS_MAINFRAME
