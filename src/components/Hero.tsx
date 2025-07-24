@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, User } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Terminal, Code2 } from "lucide-react";
+import hackerHeroImage from "@/assets/hacker-hero-bg.jpg";
 
 export const Hero = () => {
   const scrollToContent = () => {
@@ -7,55 +8,68 @@ export const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-elegant-dark via-elegant-darker to-elegant-dark">
-      {/* Floating orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-elegant-purple/10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute top-3/4 right-1/4 w-48 h-48 bg-elegant-blue/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden matrix-bg">
+      {/* Background Image with Matrix Effect */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+        style={{ backgroundImage: `url(${hackerHeroImage})` }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-br from-background-darker/90 via-background-dark/80 to-background/90" />
       </div>
       
+      {/* Scan Lines Effect */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-terminal-green/5 to-transparent animate-scan-line pointer-events-none" />
+      
       {/* Content */}
-      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in">
-        <div className="flex items-center justify-center gap-4 mb-8">
-          <div className="w-16 h-16 bg-gradient-to-br from-elegant-purple to-elegant-blue rounded-2xl flex items-center justify-center elegant-shadow">
-            <User className="w-8 h-8 text-white" />
-          </div>
+      <div className="relative z-10 text-center max-w-4xl mx-auto px-6 animate-fade-in font-mono">
+        <div className="flex items-center justify-center gap-4 mb-6">
+          <Terminal className="w-8 h-8 text-terminal-green animate-terminal-flicker" />
+          <span className="text-terminal-green text-lg font-terminal">~/portfolio $</span>
         </div>
         
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-elegant-purple-light to-elegant-blue bg-clip-text text-transparent">
-          Alex Johnson
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 neon-glow text-terminal-green font-terminal">
+          <span className="animate-glitch">ALEX_JOHNSON.EXE</span>
         </h1>
         
-        <div className="bg-card/50 backdrop-blur-lg p-8 rounded-3xl mb-8 elegant-shadow hover:elegant-shadow-hover transition-all duration-500 hover:scale-[1.02] border border-border/50">
-          <p className="text-xl md:text-2xl text-elegant-light mb-4 font-light">
-            Creative Developer & Digital Innovator
+        <div className="rounded-2xl border border-terminal-green-dim p-8 mb-8 bg-background-darker/60 backdrop-blur-lg hover:bg-background-darker/70 transition-all duration-500 hover:scale-[1.02]">
+          <p className="text-lg md:text-xl text-text-terminal mb-4 font-mono">
+            <span className="text-terminal-green">&gt;</span> Initializing hacker.portfolio...
           </p>
-          <p className="text-lg text-elegant-gray leading-relaxed">
-            Crafting beautiful digital experiences with modern technologies and elegant design principles.
+          <p className="text-lg md:text-xl text-text-terminal mb-4 font-mono">
+            <span className="text-terminal-green">&gt;</span> Loading creative_developer.module...
+          </p>
+          <p className="text-lg md:text-xl text-text-terminal font-mono">
+            <span className="text-terminal-green">&gt;</span> Ready to showcase digital_experiences.log
           </p>
         </div>
         
         {/* Social Links */}
         <div className="flex justify-center gap-4 mb-12">
-          <Button variant="outline" size="icon" className="w-14 h-14 rounded-2xl border-border/50 bg-card/30 backdrop-blur-lg hover:bg-elegant-purple/20 text-elegant-light hover:text-elegant-purple-light transition-all duration-300 hover:scale-110 elegant-shadow hover:elegant-glow">
-            <Github className="w-6 h-6" />
+          <Button variant="outline" size="icon" className="rounded-xl border border-terminal-green-dim bg-background-darker/50 hover:bg-terminal-green/20 text-terminal-green hover:text-matrix-green transition-all duration-300 hover:scale-110 hover:rotate-6">
+            <Github className="w-5 h-5" />
           </Button>
-          <Button variant="outline" size="icon" className="w-14 h-14 rounded-2xl border-border/50 bg-card/30 backdrop-blur-lg hover:bg-elegant-purple/20 text-elegant-light hover:text-elegant-purple-light transition-all duration-300 hover:scale-110 elegant-shadow hover:elegant-glow">
-            <Linkedin className="w-6 h-6" />
+          <Button variant="outline" size="icon" className="rounded-xl border border-terminal-green-dim bg-background-darker/50 hover:bg-terminal-green/20 text-terminal-green hover:text-matrix-green transition-all duration-300 hover:scale-110 hover:rotate-6">
+            <Linkedin className="w-5 h-5" />
           </Button>
-          <Button variant="outline" size="icon" className="w-14 h-14 rounded-2xl border-border/50 bg-card/30 backdrop-blur-lg hover:bg-elegant-purple/20 text-elegant-light hover:text-elegant-purple-light transition-all duration-300 hover:scale-110 elegant-shadow hover:elegant-glow">
-            <Mail className="w-6 h-6" />
+          <Button variant="outline" size="icon" className="rounded-xl border border-terminal-green-dim bg-background-darker/50 hover:bg-terminal-green/20 text-terminal-green hover:text-matrix-green transition-all duration-300 hover:scale-110 hover:rotate-6">
+            <Mail className="w-5 h-5" />
           </Button>
         </div>
         
         {/* CTA Button */}
         <Button 
           onClick={scrollToContent}
-          className="group bg-gradient-to-r from-elegant-purple to-elegant-blue hover:from-elegant-purple-light hover:to-elegant-blue text-white px-8 py-4 text-lg font-medium rounded-2xl transition-all duration-500 hover:scale-110 elegant-shadow hover:elegant-shadow-hover"
+          className="group rounded-2xl border border-terminal-green bg-terminal-green/20 hover:bg-terminal-green/30 text-terminal-green hover:text-matrix-green px-8 py-4 text-lg font-mono transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-terminal-green/20"
         >
-          Explore My Work
-          <ArrowDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform" />
+          <Code2 className="mr-2 w-5 h-5" />
+          ACCESS_MAINFRAME
+          <ArrowDown className="ml-2 w-5 h-5 group-hover:translate-y-1 transition-transform animate-terminal-flicker" />
         </Button>
+      </div>
+      
+      {/* Terminal Cursor */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-terminal-flicker">
+        <span className="text-terminal-green text-2xl font-mono">_</span>
       </div>
     </section>
   );

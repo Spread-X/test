@@ -1,79 +1,85 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Code, Heart, Lightbulb, Users, Shield, Cpu, Database, Zap } from "lucide-react";
+import { Code, Heart, Lightbulb, Users, Shield, Cpu, Database, Bug } from "lucide-react";
 
 export const About = () => {
   const skills = [
     {
       icon: Code,
-      title: "Frontend Development",
-      description: "Creating beautiful and responsive user interfaces with modern frameworks and libraries."
-    },
-    {
-      icon: Database,
-      title: "Backend Systems",
-      description: "Building scalable server-side applications and robust database architectures."
-    },
-    {
-      icon: Cpu,
-      title: "Performance Optimization",
-      description: "Optimizing applications for speed, efficiency, and exceptional user experience."
+      title: "CLEAN_CODE.EXE",
+      description: "Writing elegant algorithms that are both functional and maintainable. Code is poetry in digital form."
     },
     {
       icon: Shield,
-      title: "Security Best Practices",
-      description: "Implementing secure coding practices and protecting user data with industry standards."
+      title: "SECURITY_PROTOCOLS",
+      description: "Implementing robust security measures and thinking like an attacker to build unbreachable systems."
     },
     {
-      icon: Zap,
-      title: "Modern Technologies",
-      description: "Staying current with the latest tools and technologies in the development ecosystem."
+      icon: Cpu,
+      title: "SYSTEM_OPTIMIZATION",
+      description: "Performance tuning and resource optimization to push hardware and software to their limits."
+    },
+    {
+      icon: Database,
+      title: "DATA_MANIPULATION",
+      description: "Extracting insights from chaos, turning raw data into meaningful information architectures."
+    },
+    {
+      icon: Bug,
+      title: "DEBUG_PROTOCOLS",
+      description: "Hunting down elusive bugs and system vulnerabilities with surgical precision and patience."
     },
     {
       icon: Lightbulb,
-      title: "Creative Problem Solving",
-      description: "Finding innovative solutions to complex challenges through analytical thinking."
+      title: "INNOVATION_ENGINE",
+      description: "Constantly exploring cutting-edge technologies and unconventional solutions to complex problems."
     },
     {
       icon: Users,
-      title: "Team Collaboration",
-      description: "Working effectively with cross-functional teams to deliver exceptional products."
+      title: "NETWORK_BUILDING",
+      description: "Collaborating with fellow hackers and engineers to build solutions that change the world."
     },
     {
       icon: Heart,
-      title: "User-Centered Design",
-      description: "Designing with empathy and focus on creating meaningful user experiences."
+      title: "PASSION_DRIVEN",
+      description: "Every line of code written with genuine excitement for the craft and dedication to excellence."
     }
   ];
 
   return (
-    <section id="about" className="py-20 px-6 bg-gradient-to-b from-elegant-dark to-elegant-darker">
+    <section className="py-20 px-6 bg-background-dark">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-elegant-purple-light to-elegant-blue bg-clip-text text-transparent animate-slide-up">
-            About Me
-          </h2>
-          <div className="bg-card/50 backdrop-blur-lg p-8 rounded-3xl max-w-4xl mx-auto elegant-shadow hover:elegant-shadow-hover transition-all duration-500 hover:scale-[1.02] border border-border/50 animate-slide-up">
-            <p className="text-lg text-elegant-light leading-relaxed mb-6">
-              I'm a passionate developer who loves crafting digital experiences that make a difference. 
-              With a keen eye for design and a deep understanding of modern technologies, I bridge the gap 
-              between beautiful user interfaces and powerful functionality.
+          <div className="flex items-center justify-center gap-3 mb-6">
+            <span className="text-terminal-green font-mono text-lg">&gt;</span>
+            <h2 className="text-4xl font-bold text-terminal-green font-mono neon-glow">ABOUT_ME.TXT</h2>
+          </div>
+          <div className="rounded-2xl border border-terminal-green-dim p-8 bg-background-darker/60 backdrop-blur-lg max-w-4xl mx-auto hover:bg-background-darker/70 transition-all duration-500 animate-slide-up">
+            <p className="text-lg text-text-terminal font-mono leading-relaxed mb-4">
+              <span className="text-terminal-green">$</span> cat personal_info.log
             </p>
-            <p className="text-lg text-elegant-gray leading-relaxed">
-              My mission is to create innovative solutions that solve real-world problems while 
-              delivering exceptional user experiences through clean, efficient, and maintainable code.
+            <p className="text-lg text-text-terminal font-mono leading-relaxed mb-4">
+              I'm a digital architect who thrives in the space between creativity and logic. 
+              When I'm not deep in code, you'll find me reverse-engineering new technologies, 
+              exploring cybersecurity challenges, or sharing knowledge about the art of elegant programming.
+            </p>
+            <p className="text-lg text-text-terminal font-mono leading-relaxed">
+              <span className="text-terminal-green">$</span> grep -i "mission" life_goals.txt
+            </p>
+            <p className="text-lg text-text-terminal font-mono leading-relaxed">
+              Building systems that push boundaries and solve real-world problems through innovative tech.
             </p>
           </div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skills.map((skill, index) => (
-            <Card key={index} className="bg-card/50 backdrop-blur-lg border border-border/50 hover:border-elegant-purple/50 transition-all duration-500 hover:scale-105 hover:-translate-y-2 elegant-shadow hover:elegant-shadow-hover group animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+            <Card key={index} className="rounded-2xl border border-terminal-green-dim bg-background-darker/50 hover:bg-terminal-green/10 transition-all duration-500 hover:scale-105 hover:border-terminal-green backdrop-blur-lg group animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="space-y-4 pt-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-elegant-purple to-elegant-blue rounded-2xl flex items-center justify-center mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 elegant-shadow">
-                  <skill.icon className="w-7 h-7 text-white" />
+                <div className="w-12 h-12 rounded-xl border border-terminal-green-dim bg-terminal-green/20 flex items-center justify-center mx-auto group-hover:bg-terminal-green/30 transition-all duration-300 group-hover:rotate-12">
+                  <skill.icon className="w-6 h-6 text-terminal-green group-hover:animate-bounce-subtle" />
                 </div>
-                <h3 className="text-lg font-bold text-elegant-light text-center group-hover:text-elegant-purple-light transition-colors duration-300">{skill.title}</h3>
-                <p className="text-elegant-gray text-sm leading-relaxed text-center group-hover:text-elegant-light transition-colors duration-300">{skill.description}</p>
+                <h3 className="text-lg font-bold text-terminal-green font-mono text-center group-hover:neon-glow transition-all duration-300">{skill.title}</h3>
+                <p className="text-text-dim text-sm leading-relaxed text-center font-mono group-hover:text-text-terminal transition-colors duration-300">{skill.description}</p>
               </CardContent>
             </Card>
           ))}
