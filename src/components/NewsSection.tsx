@@ -4,12 +4,12 @@ import { Calendar, Clock, Globe } from "lucide-react";
 
 export const NewsSection = () => {
   const newsPost = {
-    title: "Welcome to My Digital Space",
-    excerpt: "After years of sharing trading insights and crypto analysis on YouTube, I decided it was time to create a dedicated platform where I could connect with my community beyond video content.",
-    content: "Building this website has been an exciting journey of bringing together my passion for trading, technology, and community building. As the SpreadX YouTube channel has grown, I realized the need for a central hub where subscribers and fellow traders could access resources, insights, and updates in a more structured format. This platform represents the next evolution of how I share knowledge about cryptocurrency trading, options strategies, and market analysis. Here, you'll find curated content, exclusive insights, and a direct way to stay connected with the latest developments in both my trading journey and the broader financial markets.",
+    title: "Welcome to My Digital Portfolio",
+    excerpt: "After wanting a professional online presence for quite some time, I finally decided to build this website from scratch using modern web technologies and design principles.",
+    content: "Creating this website has been an exciting personal project that allowed me to showcase my skills in web development and design. Built with React, TypeScript, and Tailwind CSS, this platform represents hours of careful planning, coding, and refinement. From choosing the right color palette and typography to implementing smooth animations and responsive design, every detail was crafted with intention. The goal was to create a clean, modern, and engaging digital space that effectively communicates who I am and what I do. This website serves as both a portfolio and a testament to my commitment to quality development and user experience design.",
     date: "Jan 25, 2025",
     readTime: "2 min read",
-    tags: ["Announcement", "Website Launch", "Community"]
+    tags: ["Web Development", "Portfolio", "React"]
   };
 
   return (
@@ -19,7 +19,7 @@ export const NewsSection = () => {
           <h2 className="text-4xl font-bold text-text-primary mb-6">Latest News</h2>
           <div className="rounded-2xl border border-border p-8 bg-surface shadow-elegant-lg hover:shadow-elegant-xl hover:scale-105 transition-all duration-500 animate-slide-up elegant-glow">
             <p className="text-lg text-text-secondary leading-relaxed">
-              Stay updated with the latest announcements, website updates, and insights from the SpreadX community.
+              Stay updated with the latest announcements, development progress, and insights about this website.
             </p>
           </div>
         </div>
