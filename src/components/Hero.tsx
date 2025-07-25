@@ -31,14 +31,20 @@ export const Hero = () => {
         
         {/* Social Links */}
         <div className="flex justify-center gap-4 mb-12">
-          <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300">
-            <Github className="w-5 h-5" />
+          <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300" asChild>
+            <a href="https://github.com/harsithraja" target="_blank" rel="noopener noreferrer">
+              <Github className="w-5 h-5" />
+            </a>
           </Button>
-          <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300">
-            <Linkedin className="w-5 h-5" />
+          <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300" asChild>
+            <a href="https://linkedin.com/in/harsithraja" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-5 h-5" />
+            </a>
           </Button>
-          <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300">
-            <Mail className="w-5 h-5" />
+          <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300" asChild>
+            <a href="mailto:harsithraja@example.com">
+              <Mail className="w-5 h-5" />
+            </a>
           </Button>
         </div>
         
