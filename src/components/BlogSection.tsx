@@ -3,47 +3,47 @@ import { BlogPost } from "./BlogPost";
 export const BlogSection = () => {
   const posts = [
     {
-      title: "Building Modern React Applications",
-      excerpt: "Exploring the latest React patterns and best practices for creating scalable, maintainable applications with TypeScript and modern tooling.",
-      date: "Dec 15, 2024",
-      readTime: "8 min read",
-      tags: ["React", "TypeScript", "Web Development"],
+      title: "Get Ready For The Biggest Crypto Surge Of 2025 | XRP XLM XDC & MORE!",
+      excerpt: "The biggest crypto surge of 2025 is coming, and the projects leading it aren't just hype coins—they're utility-driven assets like XRP, XLM, XDC, and other ISO 20022-compliant networks.",
+      date: "Jan 20, 2025",
+      readTime: "12 min watch",
+      tags: ["Crypto", "XRP", "Investment"],
       featured: true
     },
     {
-      title: "Designing Beautiful User Interfaces",
-      excerpt: "A deep dive into modern UI/UX principles, from color theory and typography to creating intuitive user experiences that delight users.",
-      date: "Dec 10, 2024",
-      readTime: "6 min read",
-      tags: ["UI/UX", "Design", "Frontend"]
+      title: "If You Hold STELLAR XLM This Is CRUCIAL To Know",
+      excerpt: "XLM is showing one of the strongest setups we've seen in years — with a potential golden cross, a bullish pennant formation, and the highly anticipated Protocol 23 upgrade all converging.",
+      date: "Jan 15, 2025",
+      readTime: "10 min watch",
+      tags: ["Stellar", "XLM", "Trading"]
     },
     {
-      title: "Performance Optimization Strategies",
-      excerpt: "Techniques for optimizing web applications, from code splitting and lazy loading to advanced caching strategies and bundle optimization.",
-      date: "Dec 5, 2024",
-      readTime: "5 min read",
-      tags: ["Performance", "Optimization", "Web Vitals"]
+      title: "Master Crypto Trading Spreads in 5 Minutes",
+      excerpt: "Learn the essential concept of bid ask spread in cryptocurrency trading and how liquidity affects your trading decisions. Understanding market dynamics can help you make better trades.",
+      date: "Jan 10, 2025",
+      readTime: "5 min watch",
+      tags: ["Trading", "Spreads", "Education"]
     },
     {
-      title: "API Design and Best Practices",
-      excerpt: "Creating robust, scalable APIs with proper error handling, documentation, and security considerations for modern web applications.",
-      date: "Nov 28, 2024",
-      readTime: "7 min read",
-      tags: ["API", "Backend", "Architecture"]
+      title: "Options Trading With Credit Spreads (FULL Trading Plan w/ Results)",
+      excerpt: "Trading credit spreads is a very popular strategy among income-based traders. Learn data-driven options strategies with complete trading plan and real results.",
+      date: "Dec 28, 2024",
+      readTime: "15 min watch",
+      tags: ["Options", "Credit Spreads", "Strategy"]
     },
     {
-      title: "Modern CSS Techniques",
-      excerpt: "Exploring CSS Grid, Flexbox, custom properties, and modern layout techniques for creating responsive, maintainable stylesheets.",
-      date: "Nov 20, 2024",
-      readTime: "5 min read",
-      tags: ["CSS", "Responsive Design", "Frontend"]
+      title: "How to Manage Losing Credit Spread",
+      excerpt: "Credit spreads can generate consistent income, but one costly mistake could erase months or even years of gains. Learn critical lessons from real trading experiences.",
+      date: "Dec 20, 2024",
+      readTime: "8 min watch",
+      tags: ["Risk Management", "Options", "Trading"]
     },
     {
-      title: "My Development Journey",
-      excerpt: "Reflecting on my path from learning the basics to becoming a full-stack developer, sharing lessons learned and advice for newcomers.",
-      date: "Nov 15, 2024",
-      readTime: "4 min read",
-      tags: ["Career", "Learning", "Personal Growth"]
+      title: "Why I Trade 10 Wide SPX Credit Spreads for 0 DTE",
+      excerpt: "Delving into zero-day-to-expiration trading and sharing insights based on extensive analysis. Learn about 'The Sweet Spot' in 0 DTE trading and ideal spread widths.",
+      date: "Dec 15, 2024",
+      readTime: "12 min watch",
+      tags: ["0 DTE", "SPX", "Options"]
     }
   ];
 
