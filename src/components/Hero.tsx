@@ -42,7 +42,7 @@ export const Hero = () => {
             </a>
           </Button>
           <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300" asChild>
-            <a href="mailto:harsithraja@example.com">
+            <a href="mailto:Ideagallaxy3000@gmail.com">
               <Mail className="w-5 h-5" />
             </a>
           </Button>

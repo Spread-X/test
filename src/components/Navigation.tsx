@@ -8,13 +8,17 @@ export const Navigation = () => {
   const navItems = [
     { label: "Home", href: "#home" },
     { label: "About", href: "#about" },
-    { label: "Posts", href: "#posts" },
-    { label: "Contact", href: "#contact" },
+    { label: "News", href: "#news" },
+    { label: "Contact", href: "https://spread-x.github.io/contact-me" },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    element?.scrollIntoView({ behavior: 'smooth' });
+  const handleNavClick = (href: string) => {
+    if (href.startsWith('http')) {
+      window.open(href, '_blank', 'noopener noreferrer');
+    } else {
+      const element = document.querySelector(href);
+      element?.scrollIntoView({ behavior: 'smooth' });
+    }
     setIsOpen(false);
   };
 
@@ -32,7 +36,7 @@ export const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.label}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item.href)}
                 className="text-text-secondary hover:text-primary transition-all duration-300 font-medium relative group px-4 py-2 rounded-xl hover:bg-surface-hover hover:scale-105 hover:shadow-elegant"
               >
                 {item.label}
@@ -59,7 +63,7 @@ export const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.label}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={() => handleNavClick(item.href)}
                   className="text-left text-text-secondary hover:text-primary transition-all duration-300 font-medium py-3 px-4 rounded-lg hover:bg-surface-hover hover:translate-x-2 hover:shadow-elegant"
                 >
                   {item.label}
