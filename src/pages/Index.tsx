@@ -1,7 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { BlogSection } from "@/components/BlogSection";
+import { NewsSection } from "@/components/NewsSection";
 
 const Index = () => {
   return (
@@ -15,7 +15,7 @@ const Index = () => {
           <div id="about">
             <About />
           </div>
-          <BlogSection />
+          <NewsSection />
         </section>
       </main>
     </div>
