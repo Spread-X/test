@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, User, Briefcase } from "lucide-react";
+import { ArrowDown, Github, Youtube, Mail, User, Briefcase } from "lucide-react";
 
 export const Hero = () => {
   const scrollToContent = () => {
@@ -32,13 +32,13 @@ export const Hero = () => {
         {/* Social Links */}
         <div className="flex justify-center gap-4 mb-12">
           <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300" asChild>
-            <a href="https://github.com/harsithraja" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/Spread-X" target="_blank" rel="noopener noreferrer">
               <Github className="w-5 h-5" />
             </a>
           </Button>
           <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300" asChild>
-            <a href="https://linkedin.com/in/harsithraja" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="w-5 h-5" />
+            <a href="https://www.youtube.com/@SpreadX" target="_blank" rel="noopener noreferrer">
+              <Youtube className="w-5 h-5" />
             </a>
           </Button>
           <Button variant="outline" size="icon" className="rounded-xl shadow-elegant hover:shadow-elegant-lg hover:scale-110 transition-all duration-300" asChild>
